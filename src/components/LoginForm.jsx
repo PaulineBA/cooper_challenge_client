@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from 'semantic-ui-react';
 
+
 const LoginForm = ({ submitFormHandler }) => {
   return (
     <form onSubmit={submitFormHandler} id="login-form">

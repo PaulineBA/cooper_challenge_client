@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Button } from 'semantic-ui-react';
 import DisplayCooperResult from "./components/DisplayCooperResult";
 import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
@@ -9,7 +9,7 @@ import DisplayPerformanceData from "./components/DisplayPerformanceData"
 class App extends Component {
   state = {
     distance:"",
-    gender: "",
+    gender: "female",
     age: "",
     entrySaved: false,
     renderLoginForm: false,
@@ -48,12 +48,13 @@ class App extends Component {
         case !renderLoginForm && !authenticated:
           renderLogin = (
             <>
-              <button
+              <Button 
+              color="green"
                 id="login"
                 onClick={() => this.setState({ renderLoginForm: true })}
               >
                 Login
-              </button>
+              </Button>
               <p id="message">{message}</p>
             </>
           );

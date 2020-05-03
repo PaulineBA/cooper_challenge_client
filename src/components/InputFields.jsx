@@ -1,26 +1,33 @@
 import React from 'react';
+import { Form, Container } from 'semantic-ui-react';
 
 const InputFields = ({ onChangeHandler }) => {
   return (
     <>
+    <Container style={{width: 800}}>
+      <Form>
+    <Form.Field>
       <label>Distance</label>
-      <input 
-        onChange={onChangeHandler}
+      <input placeholder='Distance' 
+      onChange={onChangeHandler}
         name="distance" 
-        id="distance"
-      ></input>
+        id="distance"/>
 
-      <select onChange={onChangeHandler} name="gender" id="gender">
+    </Form.Field>
+    <Form.Field>
+      <label>Age</label>
+      <input placeholder='Age' 
+        onChange={onChangeHandler} 
+        name="age" 
+        id="age"/>
+
+    </Form.Field>
+    <select onChange={onChangeHandler} name="gender" id="gender">
         <option value="female">Female</option>
         <option value="male">Male</option>
       </select>
-
-      <label>Age</label>
-      <input 
-        onChange={onChangeHandler} 
-        name="age" 
-        id="age"
-      ></input>
+  </Form>
+  </Container>
     </>
   )
  }
